@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import {connect} from "react-redux";
+import Main from "./Main";
+import {bindActionCreators, BindActionCreators} from 'redux'
+import * as actions from './Redux/actions'  //importing everyhting from actions.js
+import {withRouter} from 'react-router'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function mapStateToProps(state){
+    return {
+        posts: state.posts,  //the state returned from the posts reducer function 
+        comments: state.comments  //the state returned from the comments reducer function 
+    }
 }
 
-export default App;
+function mapDispatchToProps(dispatch){
+    return bindActionCreators(actions, dispatch);
+}
+
+const App = withRouter(connect(mapStateToProps, mapDispatchToProps)(Main))   /*Doesn't actually modify the Main component, instead it returns a new 
+connected component (which is the Main component connected to the state and the actions methods as props, thus connected to the store) - App.*/
+
+export default App

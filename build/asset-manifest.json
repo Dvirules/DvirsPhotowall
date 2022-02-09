@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/DvirsPhotowall/static/css/main.3478d811.css",
+    "main.js": "/DvirsPhotowall/static/js/main.c1cde635.js",
+    "static/media/frame.png": "/DvirsPhotowall/static/media/frame.d5aee583d5867ade1fc9.png",
+    "static/media/plus.png": "/DvirsPhotowall/static/media/plus.0915654037e162a8532d.png",
+    "static/media/board.jpg": "/DvirsPhotowall/static/media/board.efe623a9ff11deb00242.jpg",
+    "index.html": "/DvirsPhotowall/index.html",
+    "main.3478d811.css.map": "/DvirsPhotowall/static/css/main.3478d811.css.map",
+    "main.c1cde635.js.map": "/DvirsPhotowall/static/js/main.c1cde635.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3478d811.css",
+    "static/js/main.c1cde635.js"
+  ]
+}
